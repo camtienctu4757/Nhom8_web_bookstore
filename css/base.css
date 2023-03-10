@@ -1,0 +1,185 @@
+/* mau chung */
+:root{
+    --primary-color: #ffeede ;
+    --login-color:#f0c5d5;
+    --login-second-color:#c3e4fd;
+    --login-third-color:#fed797;
+    --logo-color:#371a16;
+    --stick-color:#BE7A65;
+    --nav-item-color:#ca7e8d;
+    --title-color:#af6e4e;
+    --white-color: white;
+    --black-color: black;
+    --text-color: rgb(63, 59, 59);
+    --boder-color: #bfbaba;
+    --star-gold-color: yellow;
+    --discount-color: #f48b13;
+    --navbar-height: 34px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(header-height)-var(navbar-height));
+}
+/* reset css cho toan trang */
+*{
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;    
+    box-sizing: border-box; 
+    font-family: 'Roboto','sans-serif';
+}
+
+
+/* css chung cho header */
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    padding: 20px;
+    align-items: center;
+    background: var(--primary-color);
+}
+/* ---------------------------------- */
+
+
+
+/* bo css cho the li va the a */
+li{
+    list-style: none;
+}
+
+a{
+     text-decoration: none !important;
+    
+}
+
+/* ---------------------------------- */
+
+
+
+/* chia header lam 3 ti le 1:2.5:2 */
+.logo{
+    flex: 1;
+}
+.navigation{
+    flex: 2.5;
+}
+.header__icon{
+    flex:2;
+    display: flex;
+    margin-right: 5px;
+    justify-content: space-between;
+}
+
+/* --------------------------- */
+
+
+/* css cho nhung thanh phan nho trong header */
+.listnav,
+.header__icon_icon{
+    display: flex;
+    align-items: center;
+}
+
+.listnav >li{
+    text-align: center;
+    color: #333;
+   margin: 0 10px;
+}
+.listnav a{
+        color: var(--nav-item-color);
+        font-weight: 700;
+}
+.listnav a:hover{
+    box-shadow: 0 3px rgb(202, 104, 33) !important;
+    transition: box-shadow 0.3s !important;
+    color: #ed5e7b !important;
+}
+
+.form_input{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #f48b13 ;
+    padding: 5px;
+    border-radius: 5px;
+}
+.header__icon .search_icon{
+    padding: 5px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #f48b13;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.header__icon_icon a{
+    border: none;
+    margin: 0 15px;
+    align-items: center;
+    color: var(--black-color);
+    padding: 8px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.header__icon_icon .icon_1{
+    background-color: var(--login-color);    
+    color: #df617a;
+}
+.header__icon_icon .icon_2{
+    background: var(--login-second-color);
+    color: #7cc2f8;
+}
+.header__icon_icon .icon_3{
+    background: var(--login-third-color);
+    color:#eda838;
+}
+
+.icon_1:hover,
+.icon_2:hover,
+.icon_3:hover{
+    color: rgb(202, 104, 33);
+    transition: box-shadow 0.3s;
+    
+}
+
+
+/* css slider */
+
+.slider{
+    margin-top: 30px;
+}
+
+/* css footer */
+
+.footer{
+    margin-top: 30px;
+    border: none;
+    border-top: 2px solid rgba(116, 49, 22, 0.8);
+}
+.footer__contact{
+    display: flex;
+    justify-content: space-between;
+}
+.footer__company,
+.footer__link,
+.footer__pay{
+    flex: 1;
+}
+
+.footer__head{
+    font-size: 20px;
+    color: #de6007;
+    font-weight: 600;
+}
+.footer__head-icon,
+.positi{
+    font-size: 20px;
+    color: #e26e34;
+    padding: 5px;
+}
+
+.footer__copyright{
+    margin-top: 5px;
+    color: #333;
+    opacity: 0.7;
+}
