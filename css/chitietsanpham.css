@@ -1,0 +1,140 @@
+.text-row {
+    display: flex;
+}
+
+.detail-sp {
+    padding: 100px 0;
+}
+
+.product-top {
+    margin-bottom: 30px;
+}
+
+.product-top p {
+    margin: 0 12px;
+    font-size: 1rem;
+
+}
+/* ------------- hinh anh san pham chi tiet ----------- */
+.product-content-left,
+.product-content-right {
+    width: 50%;
+}
+.product-big-img{
+    width: 80%;
+    padding-right: 20px;
+}
+.product-big-img img{
+    width: 100%;
+    cursor: pointer;
+}
+.product-small-img{
+    width: 20%;
+}
+.product-small-img img{
+    width: 100%;
+    padding-left: 20px;
+    cursor: pointer;
+}
+/* -----------------chi tiet san pham ben phai --------- */
+.product-content-right-name .name{
+    font-size: 1.5rem;
+}
+.product-content-right-name p{
+    color: #ccc;
+    font-size: 1rem;
+}
+.product-content-price{
+    margin: 12px 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.product-content-number{
+    display: flex;
+    margin-bottom: 20px;
+}
+.product-content-number input{
+    width: 35px;
+    height: 30px;
+    padding-left: 3px;
+}
+.product-content-button button{
+    width: 200px;
+    height: 40px;
+    display: block;
+    margin: 20px 0 12px;
+    transition: all 0.3s ease;
+}
+.product-content-button button i, .product-content-button button p{
+    margin-top: 7px;
+}
+.product-content-button button:first-child{
+    display: flex;
+    justify-content: space-evenly;
+    background: #fff;
+    border: 2px solid #ddd;
+    cursor: pointer;
+}
+.product-content-button button:first-child:hover{
+    background: var(--black-color);
+    color: var(--white-color);
+}
+.product-content-button button:last-child{
+    border: 2px solid var(--discount-color);
+    color: var(--discount-color);
+    background: var(--white-color);
+    cursor: pointer;
+}
+.product-content-right-icon{
+    display: flex;
+}
+.product-content-right-item{
+    display: flex;
+    justify-content: center;
+    margin-right: 12px;
+}
+.product-content-right-item i{
+    font-size: 1.2rem;
+    margin-right: 6px;
+}
+.product-content-bottom-detail{
+    padding-top: 40px;
+    border-top: 1px solid #ddd;
+    position: relative;
+}
+.product-content-material{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    background:var(--white-color);
+    top: -15px;
+    left: 50%;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+.product-content-material-title{
+    border-bottom: 2px solid #ddd;
+}
+.product-content-material-item {
+    padding: 6px;
+    cursor: pointer;
+    margin-right: 6px;
+}
+.product-content-material-description{
+    padding-top: 30px;
+}
+.product-content-material-description p{
+    font-size: 1rem;
+    color: var( --text-color);
+}
+.product-content-material-description-store{
+    display: none;
+}
+/* ------------- css cho script ---------- */
+.active{
+    display: none;
+}
