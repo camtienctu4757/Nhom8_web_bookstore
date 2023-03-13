@@ -1,0 +1,430 @@
+
+/* --------------trang tri tong danh muc ----------- */
+/* .main{
+    background: #999;
+} */
+.product{
+    background: white;
+}
+.grid{
+    width: 100%;
+}
+.grid-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.grid-column-2{
+    width: 20%;
+}
+.grid-column-8{
+    width: 80%;
+}
+/* ---------------Danh muc ben trai -------------- */
+
+.danh-muc{
+    background-color: var(--primary-color);
+    border-radius: 2px;
+
+}
+.danh-muc h3{
+    font-size: 1.2rem;
+    color: var(--logo-color);
+    padding: 20px 8px 0;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.danh-muc i {
+    font-size: 1rem;
+    margin-right: 4px;
+}
+.danh-muc ul{
+    padding: 0 0 8px 0;
+    list-style: none;
+    margin-left: 10px;
+}
+
+/* lop gia cua danh mục la dau gach phan chia cac san pham trong danh muc */
+.active {
+    position: relative;
+}
+/* bo dau gach dau tien */
+.active:first-child::before{
+    display: none;
+}
+.active::before{
+    border-top: 1px solid #e1e1e1 ;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 28px;
+    right: 28px;
+}
+.active .active-link{
+    color: var(--logo-color);
+}
+/* lop gia */
+.active .active-link::before{
+    content: "";
+    position: absolute;
+    border: 4px solid;
+    /* mui ten trong suot theo chieu kim dong ho */
+    border-color: transparent transparent transparent var(--logo-color);
+    top: 50%;
+    left: 10px;
+    transform: translateY(calc(-50% - 1px ));
+}
+
+.danh-muc ul li a{
+    position: relative;
+    text-decoration: none;
+    color: var(--title-color);
+    font-size: 1rem;
+    display: block;
+    margin-left: 11px;
+    padding: 6px 20px;
+    transition: right linear 0.01s;
+    right: 0;
+    /* traisition :khi co chuyen dong se thay doi */
+}
+.danh-muc ul li a:hover {
+    color: var(--logo-color);
+    right: -4px;
+}
+
+/* ------------Danh muc ben phải -------------- */
+
+/* chinh khung ben phai các tu sap xep pho bien gia */
+.home{
+    display: flex;
+    background-color:rgba(0,0,0,0.05) ;
+    align-items: center;
+    padding: 12px 12px;
+    border-radius: 2px;
+}
+.select-input{
+    font-size: 1rem;
+}
+.page{
+    align-items: center;    
+    display: flex;
+}
+.first{
+    color: var(--logo-color);
+    font-size: 1.1rem;
+    margin-right: 16px;
+}
+.first-btn{
+    margin-right: 12px;
+    margin-top: 0px;
+}
+.page{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+.page-number{
+    font-size: 1rem;
+    color: var(--logo-color);
+    margin-right: 22px;
+}
+/* so 1 cua phan trang */
+.page-so{
+    color: var(--logo-color);
+}
+.page-control{
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    width: 70px;
+    height: 36px;
+}
+.page-control-btn{
+    /* chia doi chieu dai rong duoc khai bao phia tren */
+    flex: 1;
+    background-color: var(--white-color);
+    display: flex;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+/* dau gach nho chia doi 2 dau chuyen trang */
+.page-control-btn:first-child{
+    border-right:1px solid #eee ;
+}
+/* chinh icon phan trang*/
+.page-control-btn i {
+    margin: auto;
+    color: #555;
+}
+.trai {
+    background-color: #f8f8f8;
+    cursor: default;
+} 
+.trai i{
+    color: #ccc;
+}
+/* su lua chon ve gia */
+.select-input{
+    height: 30px;
+    padding: 0 12px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+.price-select{
+    position:absolute;
+    left: 0;
+    right: 0;
+    top: 70%;
+    border-radius:2px ;
+    background-color: var(--white-color);
+    padding:8px 16px;
+    list-style: none;
+    display: none;
+}
+.select-input:hover .price-select{
+    display: block;
+}
+.price-select-link{
+    text-decoration: none;
+    color: var(--title-color);
+    font-size: 1rem;
+    display: block;
+    padding: 4px 0;
+}
+.price-select-link:hover{
+    color: var(--logo-color);
+}
+
+/* phân trang */
+.home-pagnition{
+    /* tren duoi trai phai */
+    margin: 48px 0 32px 0;
+
+}
+.pagnition{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    
+}
+.chap{
+    margin: 0 10px;
+}
+.chap-active .chap-link{
+   background-color: var(--stick-color);
+   color: var(--white-color);
+}
+.chap-active .chap-link:hover{
+    background-color: var(--logo-color);
+}
+.chap-link{
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #939393;
+    min-width: 40px;
+    height: 30px;
+    display: block;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+}
+/* tung san pham dai dien ban */
+.grid-column-2-10{
+    padding-left: 5px;
+    padding-right: 5px;
+    /* width: 16.66674%; */
+    width: 20%;
+}
+/* tung khung san pham */
+.sp{
+    text-decoration: none;
+    display: block;
+    background-color: var(--white-color);
+    margin-top: 10px;
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);
+    /* khi chuyen dong sẽ tao su di chuyen */
+    transition: transform ease-in 0.1s;
+    will-change: transform;
+}
+/* di chuot se mat border phia duoi */
+.sp:hover{
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,0.05);
+    /* nhay theo trục y */
+    transform: translateY(-2px );
+}
+.sp-img{
+    padding-top: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-left-radius: 2px;
+    border-top-right-radius:2px ;
+    /* background-position: center; */
+}
+.sp-name{
+    font-size: 1.1rem;
+    width: 150px;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.8rem;
+    text-align: center;
+    margin: 10px 10px 4px ;
+    height: 3.6rem;
+    overflow: hidden ;
+    /* khi chu dai qua tren 2 dong se chuyen thanh dau 3 ... */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* neu truong hop cac may khong ho tro co the dung */
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
+}
+.sp-price{
+    display: flex;
+    /* can 2 gia tren cung 1 dong */
+    align-items: baseline;
+    /* gia dai qua thi xuong dong */
+    flex-wrap: wrap;
+}
+.price-old{
+    font-size: 0.8rem;
+    color: #999;
+    margin-left: 10px;
+    text-decoration: line-through;
+}
+.price-new{
+    font-size: 1.1rem;
+    color: var(--title-color);
+    margin-left: 10px;
+}
+.sp-mota{
+    display: flex;
+    justify-content: space-between;
+    margin: 6px 10px 0;
+}
+.chuthich i{
+    font-size: 0.7rem;
+}
+/* khi like thi tim doi mau */
+.like{
+    font-size: 1.1rem;
+}
+i.liked{
+    display: none;
+    color: red;
+}
+.chuthich-liked .liked{
+    display: inline-block;
+}
+.chuthich-liked .like{
+    display: none;
+}
+/* danh gia css ngoi sao */
+.sp-rating{
+    font-size: 0.5rem;
+    color: var(--text-color);
+   /* tren phai duoi trai */
+    margin:-1px 0 0 auto;
+    /* truong hop cac ngoi sao kko chinh nho lai dc thi dung */
+    /* transform: scale(0.7); 
+    transform-origin: right; */
+}
+/* ngoi sao vang */
+.gold{
+    color:var(--star-gold-color);
+}
+/* chu da ban */
+.sold{
+    color: var(--black-color);
+    font-size: 0.5rem;
+    margin-left: 6px;
+}
+.sp-sanxuat{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 10px;
+    font-size: 0.6rem;
+    color: #595959;
+    margin: 3px 10px 0;
+}
+
+.sp-brand, .sp-country{
+    display: flex;
+    justify-content: center;
+}
+/* stich yeu thich */
+.stick{
+    position: absolute;
+    top: 10px;
+    left: -3px;
+    /* dung mau cha gan nhat */
+    background-color: var(--primary-color);
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1rem;
+    padding-right: 4px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px ;
+}
+.stick i {
+    color: var(--black-color);
+    font-size: 0.7rem;
+    margin: 0 2px 0 5px;
+}
+.stick span{
+    color: var(--black-color);
+}
+ /* dau mui ten nho tren dai chu yeu thich */
+.stick::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    border-top: 3px solid currentColor;
+    border-left: 3px solid transparent ;
+    /* do toi hoi lam mau dam hon cho mui ten nho */
+    filter: brightness(50%);
+}
+/* phan tram giam gia */
+.discount{
+    border-top-right-radius: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36px;
+    height: 28px;
+    background-color:rgba(255,216,64,0.94);
+    text-align: center;
+}
+.percent{
+    font-size: 1rem;
+    font-weight: 900;
+    color: #ee4d2d;
+    line-height: 1rem;
+}
+.sale{
+    font-size: 0.1rem;
+    line-height: 1.3rem;
+    color: var(--discount-color);
+    font-weight: 600;
+    position: relative;
+}
+/* 2 cai đuôi tren dán giam giá */
+.discount::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-width: 0 18px 4px;
+    border-style: solid;
+    border-color: transparent rgba(255,216,64,0.94);
+}
